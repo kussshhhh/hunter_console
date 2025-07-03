@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-hunter-border;
+  }
+  body {
+    @apply bg-hunter-bg text-hunter-text font-sans;
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .hunt-card {
+    @apply bg-hunter-surface border border-hunter-border rounded-lg p-6;
+    @apply transition-all duration-200 hover:border-hunter-accent/50;
+  }
+  
+  .hunt-input {
+    @apply bg-hunter-surface border border-hunter-border rounded-md px-4 py-2;
+    @apply text-hunter-text placeholder-hunter-muted;
+    @apply focus:outline-none focus:border-hunter-accent focus:ring-1 focus:ring-hunter-accent;
+  }
+  
+  .hunt-button {
+    @apply bg-hunter-accent text-white px-6 py-2 rounded-md font-medium;
+    @apply hover:bg-hunter-accent/90 transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-hunter-accent/50;
+  }
+  
+  .hunt-button-secondary {
+    @apply bg-hunter-surface border border-hunter-border text-hunter-text px-6 py-2 rounded-md font-medium;
+    @apply hover:bg-hunter-border transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-hunter-accent/50;
+  }
+}
